@@ -1,0 +1,34 @@
+{
+  "name": "ranker",
+  "version": "1.0.0",
+  "description": "codebase for ranker in virtualization system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PratikTheGameDever/vir_ranker.git"
+  },
+  "keywords": [
+    "virtualization"
+  ],
+  "author": "pratik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PratikTheGameDever/vir_ranker/issues"
+  },
+  "homepage": "https://github.com/PratikTheGameDever/vir_ranker#readme",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  },
+  "engines": {
+    "node": "10.16.X",
+    "npm": "6.X.X"
+  }
+}

@@ -1,0 +1,17 @@
+---
+applications:
+- name: vir_ranker
+  command: npm start
+  memory: 1GB
+  disk_quota: 1GB
+  instances: 1
+  health-check-type: process
+  buildpack: nodejs_buildpack_current
+  env:
+    RMQ_SERVICE: 'cf-rabbitmq'
+    MQ_URL: 
+    SRC_QUEUE_NAME: ranker
+    EXCHANGE: configuration
+    DB_SERVICE_URL: 
+  services:
+  - RabbitMQ-VirtualizationTrainer
