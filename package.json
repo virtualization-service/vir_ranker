@@ -22,6 +22,7 @@
   "homepage": "https://github.com/PratikTheGameDever/vir_ranker#readme",
   "dependencies": {
     "amqplib": "^0.5.5",
+    "mongodb": "^3.6.0",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {

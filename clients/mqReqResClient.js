@@ -1,6 +1,7 @@
 const rabbitMqClient = require('./rabbitMqClient')
 const processor = require('../processMessage').rank
-const getRanker = require('./restClient').getRanker
+//const getRanker = require('./restClient').getRanker
+const getRanker = require('./mongoDbClient').findRank
 
 let actualClientPromise
 let srcQueue = process.env.SRC_QUEUE_NAME ? process.env.SRC_QUEUE_NAME : 'ranker'
