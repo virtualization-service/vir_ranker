@@ -1,7 +1,6 @@
 const rabbitMqClient = require('./rabbitMqClient')
 const processor = require('../processMessage').rank
-//const getRanker = require('./restClient').getRanker
-const getRanker = require('./mongoDbClient').findRank
+const fetchCollection = require('./mongoDbClient').fetchCollection
 
 let actualClientPromise
 let srcQueue = process.env.SRC_QUEUE_NAME ? process.env.SRC_QUEUE_NAME : 'ranker'
@@ -38,7 +37,7 @@ const handleQueueMessage = async (responseMsg) => {
   console.log('Handling response message')
   try {
     let msg = JSON.parse(responseMsg.content.toString())
-    let rank = await getRanker(msg.operation)
+    let rank = await fetchCollection(msg.operation,'rankers')
     let parsedRank = JSON.parse(rank)
 
     let newRank = processor(msg.request.formatted_data, parsedRank.data)
