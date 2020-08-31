@@ -3978,3 +3978,25 @@ describe("when request contains 1023+ properties", () => {
     expect(res[1199].rank).toEqual(1200);
   })
 })
+
+// TODO - CASE 4 - REQUEST IS NULL
+describe("when new request is null", () => {
+  it("should throw error when request is null", () => {
+  let newRequest = null;
+  let currentRank = []
+  let res = app.rank(newRequest,currentRank)
+  expect(res).toThrowError
+  })
+}
+)
+
+// TODO - CASE 4.1 - REQUEST IS NULL
+describe("when current rank is null", () => {
+  it("should throw error when current rank is null", () => {
+  let newRequest = { a: [1], b: [2] };
+  let currentRank = null;
+  let res = app.rank(newRequest,currentRank)
+  expect(res).toThrowError
+  })
+}
+)

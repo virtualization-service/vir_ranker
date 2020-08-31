@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jasmine"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "mongodb": "^3.6.0"
   },
   "devDependencies": {
-    "jasmine": "^3.5.0"
+       "jest": "^26.4.2"
   },
   "engines": {
     "node": "10.16.X",
