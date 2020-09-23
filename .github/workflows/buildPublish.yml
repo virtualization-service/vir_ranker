@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Drivers API - Node.js CI
+name: Ranker - Node.js CI
 
 on:
   push:
@@ -15,12 +15,6 @@ jobs:
         node-version: [10.x]
     steps:
     - uses: actions/checkout@v2
-    #- name: Use Node.js ${{ matrix.node-version }}
-      #uses: actions/setup-node@v1
-      #with:
-        #node-version: ${{ matrix.node-version }}
-    #- run: npm ci
-    #- run: npm build --if-present
     - name: Extract branch name
       shell: bash
       run: |
@@ -57,15 +51,5 @@ jobs:
         # Oc command to be executed
         cmd: |
           'version'
-          'project development'
+          'project vavtar-services'
           'tag --source=docker quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }} development/ranker:${{ steps.extract_branch.outputs.branch }}'
-    - name: Scan Image
-      uses: Azure/container-scan@v0
-      continue-on-error: true
-      with:
-        image-name: quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }}
-        username: ${{ secrets.docker_username }}
-        password: ${{ secrets.docker_password }}
-        token: ${{ github.token }}
-        severity-threshold: HIGH
-        run-quality-checks: false
