@@ -52,4 +52,4 @@ jobs:
         cmd: |
           'version'
           'project vavtar-services'
-          'tag --source=docker quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }} development/ranker:${{ steps.extract_branch.outputs.branch }}'
+          'tag --source=docker quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }} vavtar-services/ranker:${{ steps.extract_branch.outputs.branch }}'
