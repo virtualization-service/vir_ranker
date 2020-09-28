@@ -1,6 +1,6 @@
 const amqp = require('amqplib/callback_api')
 
-let rMQ_URL = process.env.MQ_URL || 'amqp://wmmzwwqx:l0Hdp5bLBfmf7xFIRLKear79HACeZ0Pp@llama.rmq.cloudamqp.com/wmmzwwqx'
+let rMQ_URL = process.env.MQ_URL || 'amqps://ypmxobhc:PP8UbfgrONCX7QZKN4N-8U_S0LWLr5c_@grouse.rmq.cloudamqp.com/ypmxobhc'
 
 
 let isLocal = process.env.VCAP_SERVICES == null

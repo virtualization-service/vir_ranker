@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const URL = process.env.DB_SERVICE_URL ? process.env.DB_SERVICE_URL : 'rest server url to get ranker from db/store'
+const URL = process.env.DB_SERVICE_URL ? process.env.DB_SERVICE_URL : 'http://datasaver-vavtar-services.apps.awsopenshift.ne-innovation.com/api/data/ranker'
 //process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'
 
 const getRanker = async (operationName) => {
