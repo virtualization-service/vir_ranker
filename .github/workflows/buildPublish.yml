@@ -51,5 +51,5 @@ jobs:
         # Oc command to be executed
         cmd: |
           'version'
-          'project vavtar-services'
-          'tag --source=docker quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }} vavtar-services/ranker:${{ steps.extract_branch.outputs.branch }}'
+          'project vavatar-test'
+          'tag --source=docker quay.io/neinnovationorg/ranker:${{ steps.extract_branch.outputs.branch }} vavatar-test/ranker:${{ steps.extract_branch.outputs.branch }}'
