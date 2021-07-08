@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jasmine"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
   "homepage": "https://github.com/PratikTheGameDever/vir_ranker#readme",
   "dependencies": {
     "amqplib": "^0.5.5",
-    "node-fetch": "^2.6.0"
+    "mongodb": "^3.6.0"
   },
   "devDependencies": {
-    "jasmine": "^3.5.0"
+       "jest": "^26.4.2"
   },
   "engines": {
     "node": "10.16.X",
